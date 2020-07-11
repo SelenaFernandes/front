@@ -4,6 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Permanent+Marker&display=swap');
 
 @font-face {
+	font-family:"Geomanist-Regular";
+	src: url("./fonts/geomanist-regular-webfont.ttf") format("truetype");
+}
+
+@font-face {
 	font-family:"Geomanist-Bold";
 	src: url("./fonts/hinted-Geomanist-Bold\ \(1\).ttf") format("truetype");
 }
@@ -14,136 +19,92 @@
    outline: none;
    box-sizing: border-box;
 }
+
 body, html {
-	height: 100%;
-
-
+  height: 100%;
+  
 	display: flex;
 	flex-direction: column;
 }
+
 main {
 	background-image: url('./assets/Background.jpg');
 	background-repeat: no-repeat;
-	background-size: 100% ;
-	height: 900px;
-	width: 100%;
+	background-size: 100% 1200px;
+	min-height: 900px;
+  width: 100%;
+  
+	display: flex;
+	flex-direction: column;
 }
+
 header {
-	display: flex;
-	padding: 20px 50px;
-	justify-content: space-between;
-}
-header ul {
-	display: flex;
-	align-items: center;
-}
-header ul li {
- 	list-style:none;	
-	margin-left: 20px;
-}
-header ul li a {
- 	text-decoration: none;
- 	font-size: 18px;
- 	font-family: 'Nunito', sans-serif;
- 	color: white;
-}
-header ul li a:hover {
-	text-decoration: underline;
-}
-header ul li:last-child {
-	display: flex;
-	align-items: center;
-}
-header ul li:last-child img {
-	width: 25px;
-	height: 25px;
-	margin-left: 5px;
-	border-radius: 50%;
-}
-header ul li:last-child a:hover {
-	text-decoration: none;
-}
-footer {
-    height: 50px;
-    width: 100%;
-    color: white;
-    background-color: #B962C2;
-    padding-left: 300px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 9px;
-    Display: flex;
-	Align-items: center;
-	Justify-content: center;
-}
-section {
-	float: right;
 	display: flex;
 	padding: 20px 100px;
 	justify-content: space-between;
 }
-section ul {
+
+header ul {
 	display: flex;
 	align-items: center;
 }
-section ul li {
- 	list-style:none;	
-	margin-left: 10px;
-}
-section ul li a {
- 	display: inline;
- 	text-decoration: none;
- 	text-align: center;
- 	font-size: 10px;
- 	font-family: 'Nunito', sans-serif;
- 	color: white;
 
+header ul li {
+ 	list-style:none;	
+	margin-left: 30px;
 }
-section ul li a:hover {
+
+header ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Geomanist-Regular', sans-serif;
+  color: white;
+}
+
+header ul li a:hover {
 	text-decoration: underline;
 }
-article {
-	font-family: 'Nunito', sans-serif;
-	line-height: 180%;
-	font-size: 15px;
-	margin-top: 70px;
-	margin-left: 400px;
-	margin-right: 400px;
-	margin-bottom: 70px;
-	display: flex;
-	}
-	 p { text-indent: 3em;}
-button {
-	float: right;
-	margin-top: 50px;
-	margin-right: 100px;
-	margin-left: 500px;
+
+header ul li:last-child a:hover {
 	text-decoration: none;
-	text-align: center;
-	width:500px;  
-	height:40px;
-	font-size: 20px;
- 	font-family: 'Nunito', sans-serif;
- 	background-color: #A100D1;
- 	color: white;
- 	border-color:  #A100D1;
- 	border-radius: 4px;
- 	box-shadow: none;
 }
-main #Titulo {
+
+header ul li:last-child {
+	display: flex;
+	align-items: center;
+}
+
+header ul li:last-child img {
+	width: 25px;
+	height: 25px;
+	margin-left: 5px;
+
+	border-radius: 50%;
+}
+
+header ul li:last-child a:hover {
+	text-decoration: none;
+}
+
+main div {
 	display: flex;
 	flex-direction: column;
 	align-self: flex-end;
 	margin-top: 300px;
 	margin-right: 100px;
 }
-main #Titulo p:first-child {
+
+main div p:first-child {
 	max-width: 420px;
 	align-self: flex-end;
 }
-main #Titulo p {
+
+main div p {
 	font-size: 100px;
 	font-weight: bold;
+	
 	font-family:"Geomanist-Bold";
+	letter-spacing: 4px;
 	text-align: right;
 	background-color: #78C5D6;
 	color: #FFF;
@@ -151,31 +112,133 @@ main #Titulo p {
 
 	padding: 5px 15px;
 
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
-#Texto{
+
+main div span {
+	display: flex;
+	align-items: center;
+	align-self: flex-end;
+
+	background: #A100D1;
+	padding: 10px 5px;
+
+	max-width: 600px;
+}
+
+main div span a {
+	font-size: 22px;
+	font-family:"Geomanist-Regular";
+	color: #FFF;
+	text-decoration: none;
+	
+	display: flex;
+	align-items: center;
+}
+
+main div span img {
+	width: 30px;
+	height: 30px;
+  margin-right: 10px;
+  
+	border-radius: 50%;
+}
+
+main header img {
+	margin-top: 10px;
+	margin-left: 80px;
+}
+
+#paragrafo::before {
+	content: '';
+	height: 400px;
+	width: 300px;
+	background-image: url('./assets/img-article.png');
+	background-repeat: no-repeat;
+	background-size: 300px 400px;
+
+	display: flex;
+	align-self: flex-end;
+	justify-content: flex-start;
+
+	position: absolute;
+	left: 0;
+}
+
+#paragrafo {
 	background-color: #78C5D6;
-	height: 500px;
-    Display: flex;
-	Align-items: center;
-	Justify-content: center;
+	min-height: 900px;
+	width: 100%;
+	
+	font-family: 'Geomanist-Regular', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
+#paragrafo p {
+	font-size: 22px;
+	font-family: 'Nunito', sans-serif;
+	color: #3c72a5;
+	max-width: 750px;
+	margin-left: 100px;
+	text-align: justify;
+	line-height: 26px;
+	z-index: 2;
+}
+
 #centro {
 	background-color: #A100D1;
-	height: 250px;
-    width: 100%;
-}
-#centro p {
-	font-size: 10px;
-	font-family: arial;
-	color:white;
+	min-height: 400px;
+	width: 100%;
+	
 	display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
-    grid-gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 10px;
 
+	padding: 20px 250px;
 }
-#centro img {
-	margin-top: 60px;
-	margin-left: 260px;
+
+#centro div {
+	background: #333;
+}
+
+.first img {
+  width: 200px;
+}
+
+footer {
+	min-height: 80px;
+	padding: 0 250px;
+    width: 100%;
+    background-color: #B962C2;
+	font-family: 'Geomanist-Regular', sans-serif;
+	font-size: 14px;
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer span {
+    color: #ddd;
+}
+
+footer ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+footer ul li {
+	margin-right: 15px;
+}
+
+footer ul li:last-child {
+	margin-right: 0;
+}
+
+footer ul li a {
+	text-decoration: none;
+	color: #ddd;
 }
